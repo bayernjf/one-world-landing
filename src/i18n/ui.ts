@@ -1,0 +1,91 @@
+export const languages = {
+  en: 'English',
+  zh: '中文',
+} as const;
+
+export type Lang = keyof typeof languages;
+
+export const defaultLang: Lang = 'en';
+
+// 路径语言前缀：英文无前缀，中文 /zh
+export const langPrefix: Record<Lang, string> = {
+  en: '',
+  zh: '/zh',
+};
+
+export const ui = {
+  en: {
+    'nav.features': 'Features',
+    'nav.howItWorks': 'How It Works',
+    'nav.github': 'GitHub',
+    'nav.play': 'Play Now',
+    'nav.langSwitch': '中文',
+    'hero.badge': 'Open Source · Life Gamification Engine',
+    'hero.title': 'Turn your real life into an RPG',
+    'hero.subtitle': 'One World is a 2D top-down life gamification engine. Habits, quests, and achievements mapped onto your daily routine — built with Phaser, playable in the browser.',
+    'hero.cta.primary': 'Play in Browser',
+    'hero.cta.secondary': 'View on GitHub',
+    'features.title': 'Why One World?',
+    'features.subtitle': 'A life-sim engine designed for sustained motivation, not streak guilt.',
+    'features.f1.title': 'Habit System',
+    'features.f1.desc': 'Daily habits become in-game skills that level up with consistent practice.',
+    'features.f2.title': 'Quest Engine',
+    'features.f2.desc': 'Real-world goals decomposed into quests with branching objectives and rewards.',
+    'features.f3.title': 'Top-Down 2D World',
+    'features.f3.desc': 'A cozy explorable world built on Phaser, running natively in any modern browser.',
+    'features.f4.title': 'Open Source',
+    'features.f4.desc': 'MIT-friendly core, self-hostable, extensible through a clean plugin API.',
+    'how.title': 'How It Works',
+    'how.s1.title': 'Define your real-world goals',
+    'how.s1.desc': 'Set habits, tasks, and long-term objectives. They become the world’s quests.',
+    'how.s2.title': 'Play to progress',
+    'how.s2.desc': 'Complete quests in your day. The engine tracks stats, XP, and unlocks new content.',
+    'how.s3.title': 'Grow over time',
+    'how.s3.desc': 'Your character evolves with you. No streaks to break — only a world to explore.',
+    'cta.title': 'Ready to gamify your life?',
+    'cta.subtitle': 'No install required. Open the world in your browser and start your first quest.',
+    'cta.button': 'Start Playing',
+    'footer.rights': 'All rights reserved.',
+    'footer.tagline': 'A 2D life gamification engine.',
+    'seo.description': 'One World is an open-source 2D top-down life gamification engine built with Phaser. Turn habits into quests and real-life goals into an RPG world, playable in your browser.',
+    'seo.keywords': 'life gamification, RPG habits, Phaser game, 2D life sim, productivity game, habit tracker RPG, quest engine',
+  },
+  zh: {
+    'nav.features': '功能',
+    'nav.howItWorks': '工作原理',
+    'nav.github': 'GitHub',
+    'nav.play': '立即游玩',
+    'nav.langSwitch': 'English',
+    'hero.badge': '开源 · 生活游戏化引擎',
+    'hero.title': '把你的真实生活变成一场 RPG',
+    'hero.subtitle': 'One World 是一个 2D 俯视角生活游戏化引擎。习惯、任务和成就被映射到你的日常流程中——基于 Phaser 构建，可在浏览器中直接游玩。',
+    'hero.cta.primary': '浏览器游玩',
+    'hero.cta.secondary': '在 GitHub 查看',
+    'features.title': '为什么选择 One World？',
+    'features.subtitle': '一个为持续动力而设计的生活模拟引擎，而非用连击焦虑绑架你。',
+    'features.f1.title': '习惯系统',
+    'features.f1.desc': '日常习惯转化为游戏内技能，随持续练习而升级。',
+    'features.f2.title': '任务引擎',
+    'features.f2.desc': '现实目标被分解为带有分支目标和奖励的任务。',
+    'features.f3.title': '俯视角 2D 世界',
+    'features.f3.desc': '一个基于 Phaser 构建的可探索温馨世界，在任何现代浏览器中原生运行。',
+    'features.f4.title': '完全开源',
+    'features.f4.desc': '核心开源、可自托管，通过清晰的插件 API 扩展。',
+    'how.title': '工作原理',
+    'how.s1.title': '定义你的现实目标',
+    'how.s1.desc': '设置习惯、任务和长期目标，它们将成为游戏世界的任务。',
+    'how.s2.title': '游玩以推进进度',
+    'how.s2.desc': '在日常生活中完成任务，引擎会追踪属性、经验值并解锁新内容。',
+    'how.s3.title': '随时间成长',
+    'how.s3.desc': '你的角色与你一起进化。没有要打破的连击——只有一个等待探索的世界。',
+    'cta.title': '准备好游戏化你的生活了吗？',
+    'cta.subtitle': '无需安装。在浏览器中打开世界，开始你的第一个任务。',
+    'cta.button': '开始游玩',
+    'footer.rights': '保留所有权利。',
+    'footer.tagline': '一个 2D 生活游戏化引擎。',
+    'seo.description': 'One World 是一个基于 Phaser 构建的开源 2D 俯视角生活游戏化引擎。把习惯变成任务，把现实目标变成 RPG 世界，可在浏览器中直接游玩。',
+    'seo.keywords': '生活游戏化, RPG 习惯, Phaser 游戏, 2D 生活模拟, 生产力游戏, 习惯追踪 RPG, 任务引擎',
+  },
+} as const;
+
+export type TranslationKey = keyof typeof ui.en;
