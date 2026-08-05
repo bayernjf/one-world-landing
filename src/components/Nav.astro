@@ -1,0 +1,25 @@
+---
+import { useTranslations, switchLangPath } from '../i18n/utils';
+import { type Lang } from '../i18n/ui';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const langSwitchHref = switchLangPath(Astro.url.pathname, lang);
+---
+
+<header class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-slate-950/70 border-b border-white/5">
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+    <a href={lang === 'zh' ? '/zh' : '/'} class="flex items-center gap-2 font-semibold tracking-tight">
+      <span class="inline-block w-6 h-6 rounded-md bg-gradient-to-br from-emerald-400 to-sky-500"></span>
+      <span>One World</span>
+    </a>
+    <div class="flex items-center gap-4 sm:gap-6 text-sm">
+      <a href="#features" class="hidden sm:inline text-slate-300 hover:text-white transition">{t('nav.features')}</a>
+      <a href="#how" class="hidden sm:inline text-slate-300 hover:text-white transition">{t('nav.howItWorks')}</a>
+      <a href="https://github.com" target="_blank" rel="noopener" class="text-slate-300 hover:text-white transition">{t('nav.github')}</a>
+      <a href={langSwitchHref} class="text-slate-300 hover:text-white transition">{t('nav.langSwitch')}</a>
+      <a href="#play" class="px-3 py-1.5 rounded-md bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-medium transition">{t('nav.play')}</a>
+    </div>
+  </nav>
+</header>

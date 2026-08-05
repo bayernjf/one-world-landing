@@ -1,0 +1,43 @@
+---
+import SEO from '../components/SEO.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { type Lang } from '../i18n/ui';
+
+interface Props {
+  /** 页面路径（不含语言前缀），如 "/" */
+  path: string;
+}
+
+const lang = getLangFromUrl(Astro.url) as Lang;
+const t = useTranslations(lang);
+const site = Astro.site?.href ?? 'https://one-world-landing.pages.dev';
+
+const title = `One World${lang === 'zh' ? ' · 生活游戏化引擎' : ' · Life Gamification Engine'}`;
+---
+
+<!doctype html>
+<html lang={lang === 'zh' ? 'zh-CN' : 'en'}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <SEO
+      lang={lang}
+      title={title}
+      description={t('seo.description')}
+      keywords={t('seo.keywords')}
+      path={Astro.props.path}
+      site={site}
+    />
+  </head>
+  <body>
+    <Nav lang={lang} />
+    <main>
+      <slot />
+    </main>
+    <Footer lang={lang} />
+  </body>
+</html>
