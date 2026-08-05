@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="80" y="80" width="64" height="64" rx="14" fill="url(#accent)"/>
+  <text x="80" y="290" font-family="system-ui,sans-serif" font-size="72" font-weight="700" fill="#f1f5f9">One World</text>
+  <text x="80" y="360" font-family="system-ui,sans-serif" font-size="32" fill="#94a3b8">A 2D top-down life gamification engine</text>
+  <text x="80" y="520" font-family="system-ui,sans-serif" font-size="24" fill="#34d399">Open Source · Built with Phaser · Play in Browser</text>
+</svg>
