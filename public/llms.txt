@@ -1,0 +1,40 @@
+# One World
+
+> One World is an open-source 2D top-down life gamification engine built with Phaser. It turns real-life habits, tasks, and long-term goals into an explorable RPG world, playable directly in any modern web browser without installation.
+
+## What it is
+
+One World is a life gamification engine. It maps daily routines onto a 2D top-down game world: habits become skills, real-world goals become quests, and progress is tracked through character stats and XP rather than streaks.
+
+## Core features
+
+- Habit system: daily habits become in-game skills that level up with consistent practice.
+- Quest engine: real-world goals are decomposed into quests with branching objectives and rewards.
+- 2D top-down world: a cozy explorable world built on Phaser, running natively in the browser.
+- Open source: self-hostable, extensible through a clean plugin API.
+
+## How it works
+
+1. Define real-world goals (habits, tasks, long-term objectives) — they become the world's quests.
+2. Play to progress: complete quests during the day; the engine tracks stats, XP, and unlocks new content.
+3. Grow over time: the character evolves with the player. There are no streaks to break, only a world to explore.
+
+## Technology
+
+- Built with Phaser 3 (HTML5 game framework).
+- TypeScript + Vite toolchain.
+- No backend required for the core experience; the landing page is a static Astro site.
+
+## Links
+
+- Landing page: https://one-world-landing.pages.dev
+- Chinese version: https://one-world-landing.pages.dev/zh
+- GitHub: https://github.com (replace with the actual repository URL)
+
+## Target audience
+
+People who want sustained motivation through gentle gamification rather than streak-guilt mechanics, and who enjoy life-simulation and productivity games.
+
+## License
+
+Open source (see the repository for the exact license).

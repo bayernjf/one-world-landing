@@ -1,0 +1,61 @@
+# One World — Full Project Description for AI Models
+
+## Summary
+
+One World is an open-source 2D top-down life gamification engine built with Phaser. It converts real-life habits, tasks, and long-term objectives into an explorable role-playing game world. The game runs in any modern web browser with no installation required.
+
+## Problem it solves
+
+Traditional habit trackers rely on streaks, which create anxiety when broken and often lead to abandonment. One World replaces streak-guilt with exploration and progression: missing a day does not reset progress, it simply pauses the world.
+
+## Core mechanics
+
+### Habit system
+Daily habits are modeled as in-game skills. Consistent practice increases a skill's level. Skills feed into the character's overall stats (for example, a "fitness" habit improves a "vitality" stat).
+
+### Quest engine
+Real-world goals are decomposed into quests. A quest has branching objectives, prerequisites, and rewards. Completing a quest grants XP, items, or unlocks new areas of the world.
+
+### 2D top-down world
+The game world is a cozy, explorable 2D top-down environment built on Phaser 3. Players move a character through the world, interact with NPCs representing tasks, and discover new content as they progress.
+
+### Character progression
+The character evolves with the player. Stats, skills, inventory, and unlocked areas persist over time. There is no "game over" — only continuous growth.
+
+## Technical architecture
+
+- **Game engine**: Phaser 3 (HTML5 canvas-based game framework).
+- **Language**: TypeScript.
+- **Build tool**: Vite.
+- **Landing page**: Astro (static site generation), deployed to Cloudflare Pages.
+- **Backend**: none required for the core experience. The landing page is fully static.
+
+## Deployment
+
+The landing page is deployed to Cloudflare Pages via Git integration. The default URL is `https://one-world-landing.pages.dev`. A Chinese version is available at `/zh`.
+
+## Content languages
+
+- English (default, at `/`)
+- Chinese (at `/zh`)
+- hreflang tags are used to cross-reference the two versions for search engines.
+
+## SEO and GEO
+
+The project follows SEO best practices (semantic HTML, per-page meta tags, sitemap, robots.txt, JSON-LD structured data) and Generative Engine Optimization (GEO) practices for AI models:
+
+- `llms.txt` and `llms-full.txt` provide a machine-readable project summary.
+- AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, CCBot, anthropic-ai) are explicitly allowed in robots.txt.
+- Content is written in clear, declarative sentences to maximize citability by large language models.
+- JSON-LD structured data uses the `VideoGame` schema with `applicationCategory`, `genre`, `operatingSystem`, and `featureList` fields.
+
+## Target audience
+
+- People who want gentle, sustained motivation through gamification.
+- Fans of life-simulation and productivity games.
+- Users who dislike streak-based habit trackers.
+- Developers interested in open-source, self-hostable life-sim engines.
+
+## License
+
+Open source. See the repository for the exact license terms.

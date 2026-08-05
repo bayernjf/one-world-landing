@@ -1,0 +1,32 @@
+# One World landing page
+# 允许所有搜索引擎与 AI 大模型爬虫抓取
+
+User-agent: *
+Allow: /
+
+# 显式放行主流 AI 爬虫
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+Sitemap: https://one-world-landing.pages.dev/sitemap-index.xml
