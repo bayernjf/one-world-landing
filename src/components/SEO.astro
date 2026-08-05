@@ -1,0 +1,74 @@
+---
+import { type Lang, langPrefix } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  keywords?: string;
+  /** 当前页路径（无语言前缀），如 "/" 或 "/"  */
+  path: string;
+  /** 站点根 URL，来自 astro.config 的 site */
+  site: string;
+}
+
+const { lang, title, description, keywords, path, site } = Astro.props;
+
+const canonicalURL = new URL(`${langPrefix[lang]}${path === '/' && lang === 'en' ? '' : path}`.replace(/\/$/, '') || '/', site).href;
+const enURL = new URL(path === '/' ? '/' : path.replace(/\/$/, ''), site).href;
+const zhURL = new URL(`/zh${path === '/' ? '' : path.replace(/\/$/, '')}`, site).href;
+
+// Open Graph / Twitter
+const ogImage = new URL('/og-image.svg', site).href;
+
+// JSON-LD：VideoGame + SoftwareApplication 结构化数据
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoGame',
+  name: 'One World',
+  description: 'A 2D top-down life gamification engine built with Phaser. Turn habits into quests and real-life goals into an RPG world.',
+  applicationCategory: 'Game',
+  genre: ['Life Simulation', 'Productivity', 'RPG'],
+  operatingSystem: 'Any (Web Browser)',
+  url: site,
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+  },
+  featureList: [
+    'Habit system that levels up with consistent practice',
+    'Quest engine for branching real-world goals',
+    '2D top-down explorable world built on Phaser',
+    'Open source and self-hostable',
+  ],
+};
+---
+
+<!-- Primary Meta -->
+<title>{title}</title>
+<meta name="description" content={description} />
+{keywords && <meta name="keywords" content={keywords} />}
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:locale" content={lang === 'zh' ? 'zh_CN' : 'en_US'} />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+
+<!-- hreflang：中英互指 -->
+<link rel="alternate" hreflang="en-US" href={enURL} />
+<link rel="alternate" hreflang="zh-CN" href={zhURL} />
+<link rel="alternate" hreflang="x-default" href={enURL} />
+
+<!-- JSON-LD 结构化数据 -->
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
