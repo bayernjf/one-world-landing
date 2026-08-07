@@ -1,5 +1,5 @@
 ---
-import { useTranslations } from '../i18n/utils';
+import { useTranslations, localizedPath } from '../i18n/utils';
 import { type Lang } from '../i18n/ui';
 interface Props { lang: Lang; }
 const { lang } = Astro.props;
@@ -16,6 +16,8 @@ const year = new Date().getFullYear();
     <div class="flex items-center gap-5">
       <a href="https://github.com/bayernjf/one-world" target="_blank" rel="noopener noreferrer" class="text-slate-500 transition hover:text-slate-300">GitHub</a>
       <a href="https://bayjf.com" target="_blank" rel="noopener noreferrer" class="text-slate-500 transition hover:text-slate-300">BayJF</a>
+      <a href={localizedPath('/privacy', lang)} class="text-slate-500 transition hover:text-slate-300">{t('footer.privacy')}</a>
+      <a href={localizedPath('/terms', lang)} class="text-slate-500 transition hover:text-slate-300">{t('footer.terms')}</a>
     </div>
     <p>© {year} One World. {t('footer.rights')}</p>
   </div>

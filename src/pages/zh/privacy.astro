@@ -1,0 +1,67 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = '隐私政策 | One World';
+const description = 'One World 隐私政策：本站及浏览器内可玩的 Demo 如何处理与你访问相关的信息。';
+const repoUrl = 'https://github.com/bayernjf/one-world';
+---
+
+<Layout path="/privacy" title={title} description={description}>
+  <section class="mx-auto max-w-3xl px-4 sm:px-6 pt-28 pb-20">
+    <h1 class="text-3xl font-bold text-white">隐私政策</h1>
+    <p class="mt-2 text-sm text-slate-500">最后更新：2026 年 8 月 7 日</p>
+
+    <div class="mt-8 space-y-8 text-sm leading-7 text-slate-300">
+      <section>
+        <h2 class="text-lg font-semibold text-slate-100">1. 概述</h2>
+        <p class="mt-2">
+          One World（下称「本站」）是开源 2D 俯视角生活游戏化引擎 One World 的介绍站点与浏览器内可玩的试玩 Demo。该引擎基于 Phaser 构建，把习惯与现实目标变成 RPG 世界。我们尊重并保护访问者的隐私，本政策说明本站如何处理与你访问相关的信息。使用本站即表示你同意本政策的约定。
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-slate-100">2. 我们收集的信息</h2>
+        <ul class="mt-2 list-disc space-y-1 pl-5">
+          <li>本站为静态站点，不提供账号注册，不主动收集姓名、邮箱等个人身份信息。</li>
+          <li>访问站点时，托管平台（如 Cloudflare Pages）可能按其自身政策记录基础访问日志（IP、User-Agent 等），该过程不受本站控制。</li>
+          <li>若本站后续启用统计分析，仅使用匿名化的访问统计（页面浏览量、来源等），不用于识别个人身份。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-slate-100">3. Cookie 与本地存储</h2>
+        <p class="mt-2">
+          本站可能使用浏览器的 Cookie 或 localStorage 保存语言偏好等界面设置；浏览器内可玩的 Demo 还可能在本地存储中保存游戏设置与进度。这些数据仅保存在你的设备上，不会上传给我们，只用于改善体验，不用于跨站追踪。你可以在浏览器设置中禁用或删除这些数据。
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-slate-100">4. 第三方链接</h2>
+        <p class="mt-2">
+          本站包含指向 GitHub 等第三方网站的链接（源代码与 Issues）。第三方站点的隐私实践与本站无关，请查阅其各自的隐私政策。
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-slate-100">5. 未成年人</h2>
+        <p class="mt-2">本站不面向 14 周岁以下儿童，也不会有意收集其个人信息。</p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-slate-100">6. 政策变更</h2>
+        <p class="mt-2">
+          本政策可能随产品演进更新，变更将在本页发布并更新「最后更新」日期。重大变更建议定期查阅本页。
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-slate-100">7. 联系我们</h2>
+        <p class="mt-2">
+          如对本政策有任何疑问，请通过
+          <a href={repoUrl} target="_blank" rel="noopener noreferrer" class="text-emerald-400 transition hover:text-emerald-300">GitHub 仓库</a>
+          的 Issues 与我们联系。
+        </p>
+      </section>
+    </div>
+  </section>
+</Layout>
