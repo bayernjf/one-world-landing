@@ -1,0 +1,67 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = '服务条款 | One World';
+const description = 'One World 服务条款：使用本站与浏览器内试玩 Demo 的相关约定。';
+const repoUrl = 'https://github.com/bayernjf/one-world';
+---
+
+<Layout path="/terms" title={title} description={description}>
+  <section class="mx-auto max-w-3xl px-4 sm:px-6 pt-28 pb-20">
+    <h1 class="text-3xl font-bold text-white">服务条款</h1>
+    <p class="mt-2 text-sm text-slate-500">最后更新：2026 年 8 月 7 日</p>
+
+    <div class="mt-8 space-y-8 text-sm leading-7 text-slate-300">
+      <section>
+        <h2 class="text-lg font-semibold text-slate-100">1. 接受条款</h2>
+        <p class="mt-2">
+          欢迎访问 One World（下称「本站」），即 One World 生活游戏化引擎的介绍站点与浏览器内可玩的试玩 Demo。访问或使用本站即表示你同意受本条款约束。如不同意，请停止使用本站。
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-slate-100">2. 站点内容</h2>
+        <p class="mt-2">
+          本站内容包括产品介绍、展示画面与可玩的试玩 Demo，均按「现状」提供，可能随引擎迭代发生变化。我们努力保证信息准确，但不对内容的完整性、时效性作任何明示或暗示的保证。
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-slate-100">3. 知识产权</h2>
+        <p class="mt-2">
+          本站的文案、设计与标识归 One World 项目方所有，未经许可不得用于商业目的。开源引擎代码以其仓库中声明的开源许可证为准。
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-slate-100">4. 合理使用</h2>
+        <p class="mt-2">
+          请勿以任何可能损害、干扰本站运行或侵犯他人权益的方式使用本站，包括但不限于恶意爬取、注入攻击或冒充本站与项目身份。
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-slate-100">5. 责任限制</h2>
+        <p class="mt-2">
+          在法律允许的最大范围内，本站不对因使用或无法使用本站内容（包括游戏 Demo）而产生的任何间接、附带或后果性损失承担责任。
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-slate-100">6. 条款变更</h2>
+        <p class="mt-2">
+          本条款可能更新，变更将在本页发布。继续使用本站即视为接受更新后的条款。
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-slate-100">7. 联系方式</h2>
+        <p class="mt-2">
+          如有疑问，请通过
+          <a href={repoUrl} target="_blank" rel="noopener noreferrer" class="text-emerald-400 transition hover:text-emerald-300">GitHub 仓库</a>
+          的 Issues 与我们联系。
+        </p>
+      </section>
+    </div>
+  </section>
+</Layout>

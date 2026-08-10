@@ -1,15 +1,16 @@
 ---
 import { useTranslations } from '../i18n/utils';
 import { type Lang } from '../i18n/ui';
+import Icon from '@bay/landing-ui/components/Icon.astro';
 interface Props { lang: Lang; }
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 
 const features = [
-  { icon: '◆', title: t('features.f1.title'), desc: t('features.f1.desc') },
-  { icon: '▲', title: t('features.f2.title'), desc: t('features.f2.desc') },
-  { icon: '●', title: t('features.f3.title'), desc: t('features.f3.desc') },
-  { icon: '■', title: t('features.f4.title'), desc: t('features.f4.desc') },
+  { icon: 'Repeat', title: t('features.f1.title'), desc: t('features.f1.desc') },
+  { icon: 'Target', title: t('features.f2.title'), desc: t('features.f2.desc') },
+  { icon: 'Gamepad2', title: t('features.f3.title'), desc: t('features.f3.desc') },
+  { icon: 'Code', title: t('features.f4.title'), desc: t('features.f4.desc') },
 ];
 ---
 
@@ -22,8 +23,8 @@ const features = [
     <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {features.map((f) => (
         <div class="group p-6 rounded-2xl bg-white/[0.03] ring-1 ring-white/5 hover:ring-emerald-500/30 hover:bg-white/[0.05] transition">
-          <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-300 flex items-center justify-center text-lg">
-            {f.icon}
+          <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-300 flex items-center justify-center">
+            <Icon name={f.icon} size={20} />
           </div>
           <h3 class="mt-4 font-semibold text-lg">{f.title}</h3>
           <p class="mt-2 text-sm text-slate-400 leading-relaxed">{f.desc}</p>

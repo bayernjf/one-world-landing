@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Privacy Policy | One World';
+const description = 'Privacy Policy of One World: how the site and its in-browser game demo handle information related to your visit.';
+const repoUrl = 'https://github.com/bayernjf/one-world';
+---
+
+<Layout path="/privacy" title={title} description={description}>
+  <section class="mx-auto max-w-3xl px-4 sm:px-6 pt-28 pb-20">
+    <h1 class="text-3xl font-bold text-white">Privacy Policy</h1>
+    <p class="mt-2 text-sm text-slate-500">Last updated: August 7, 2026</p>
+
+    <div class="mt-8 space-y-8 text-sm leading-7 text-slate-300">
+      <section>
+        <h2 class="text-lg font-semibold text-slate-100">1. Overview</h2>
+        <p class="mt-2">
+          One World (the "Site") is the introduction site and in-browser playable demo for One World, an open-source 2D top-down life gamification engine built with Phaser that turns habits and real-life goals into an RPG world. We respect and protect the privacy of our visitors. This policy explains how information related to your visit is handled. By using the Site you agree to the terms of this policy.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-slate-100">2. Information We Handle</h2>
+        <ul class="mt-2 list-disc space-y-1 pl-5">
+          <li>The Site is static, offers no account registration, and does not actively collect personally identifiable information such as names or email addresses.</li>
+          <li>The hosting platform (e.g. Cloudflare Pages) may record basic access logs (IP, User-Agent, etc.) under its own policies, outside our control.</li>
+          <li>If analytics are enabled in the future, only anonymized usage statistics (page views, referrers, etc.) will be used, never to identify individuals.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-slate-100">3. Cookies & Local Storage</h2>
+        <p class="mt-2">
+          The Site may use browser cookies or localStorage to remember interface preferences such as language. The playable game demo may additionally store settings and game progress in your browser's local storage. All of this data stays on your device, is never transmitted to us, and is used solely to improve your experience, never for cross-site tracking. You can disable or clear it in your browser settings.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-slate-100">4. Third-Party Links</h2>
+        <p class="mt-2">
+          The Site contains links to third-party websites such as GitHub (source code and issues). Their privacy practices are not covered by this policy; please refer to their own policies.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-slate-100">5. Children</h2>
+        <p class="mt-2">The Site is not directed at children under 14, and we do not knowingly collect personal information from them.</p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-slate-100">6. Changes</h2>
+        <p class="mt-2">
+          This policy may be updated as the product evolves. Changes will be posted on this page with an updated revision date.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-slate-100">7. Contact</h2>
+        <p class="mt-2">
+          Questions about this policy can be raised via Issues on our
+          <a href={repoUrl} target="_blank" rel="noopener noreferrer" class="text-emerald-400 transition hover:text-emerald-300">GitHub repository</a>.
+        </p>
+      </section>
+    </div>
+  </section>
+</Layout>
