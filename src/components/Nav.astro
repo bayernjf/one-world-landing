@@ -1,4 +1,5 @@
 ---
+import BayjfLink from '@bay/landing-ui/components/BayjfLink.astro';
 import { useTranslations, switchLangPath } from '../i18n/utils';
 import { type Lang } from '../i18n/ui';
 
@@ -28,7 +29,7 @@ const langSwitchHref = switchLangPath(Astro.url.pathname, lang);
       <a href="#features" class="hidden sm:inline text-slate-300 hover:text-white transition">{t('nav.features')}</a>
       <a href="#how" class="hidden sm:inline text-slate-300 hover:text-white transition">{t('nav.howItWorks')}</a>
       <a href="https://github.com/bayernjf/one-world" target="_blank" rel="noopener noreferrer" class="hidden sm:inline text-slate-300 hover:text-white transition">{t('nav.github')}</a>
-      <a href="https://bayjf.com" target="_blank" rel="noopener noreferrer" class="hidden sm:inline text-slate-300 hover:text-white transition">BayJF</a>
+      <BayjfLink size={18} class="hidden sm:inline text-slate-300 hover:text-white transition" />
       <a href={langSwitchHref} class="text-slate-300 hover:text-white transition">{t('nav.langSwitch')}</a>
       <a href="#play" class="px-3 py-1.5 rounded-md bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-medium transition">{t('nav.play')}</a>
     </div>
