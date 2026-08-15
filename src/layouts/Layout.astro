@@ -19,7 +19,7 @@ const { path, title: titleProp, description: descriptionProp } = Astro.props;
 
 const lang = getLangFromUrl(Astro.url) as Lang;
 const t = useTranslations(lang);
-const site = Astro.site?.href ?? 'https://one-world-landing.pages.dev';
+const site = Astro.site?.href ?? 'https://one-world.bayjf.com';
 
 const title = titleProp ?? `One World${lang === 'zh' ? ' · 生活游戏化引擎' : ' · Life Gamification Engine'}`;
 const description = descriptionProp ?? t('seo.description');

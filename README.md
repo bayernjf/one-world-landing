@@ -69,7 +69,7 @@ one-world-landing/
 
 ## 部署
 
-- `astro.config.mjs` 中的 `site` 当前为占位域名 `https://one-world-landing.pages.dev`（Cloudflare Pages 风格），上线时需替换为实际域名。
+- `astro.config.mjs` 中的 `site` 当前为占位域名 `https://one-world.bayjf.com`（Cloudflare Pages 风格），上线时需替换为实际域名。
 - `public/_headers` 已配置安全响应头、`/_astro/*` 长期缓存以及 `robots.txt` / sitemap / `llms*.txt` 不缓存策略；`public/_redirects` 当前为空，预留自定义域名跳转或旧路径迁移。
 - 部署前运行 `npm run build`，产物目录为 `dist`。
 

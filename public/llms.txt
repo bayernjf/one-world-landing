@@ -27,8 +27,8 @@ One World is a life gamification engine. It maps daily routines onto a 2D top-do
 
 ## Links
 
-- Landing page: https://one-world-landing.pages.dev
-- Chinese version: https://one-world-landing.pages.dev/zh
+- Landing page: https://one-world.bayjf.com
+- Chinese version: https://one-world.bayjf.com/zh
 - GitHub: https://github.com (replace with the actual repository URL)
 
 ## Target audience
