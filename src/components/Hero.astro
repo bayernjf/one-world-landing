@@ -19,9 +19,22 @@ const t = useTranslations(lang);
       {t('hero.subtitle')}
     </p>
     <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a href="#play" class="w-full sm:w-auto px-6 py-3 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold transition">
-        {t('hero.cta.primary')}
-      </a>
+      <span class="group relative inline-flex w-full sm:w-auto">
+        <span
+          role="button"
+          aria-disabled="true"
+          tabindex="0"
+          class="w-full sm:w-auto px-6 py-3 rounded-lg bg-emerald-500/40 text-slate-950/60 font-semibold cursor-not-allowed text-center"
+        >
+          {t('hero.cta.primary')}
+        </span>
+        <span
+          role="tooltip"
+          class="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-slate-900 px-2.5 py-1 text-xs text-slate-100 ring-1 ring-white/10 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100"
+        >
+          {t('cta.comingSoon')}
+        </span>
+      </span>
       <a href="https://github.com/bayernjf/one-world" target="_blank" rel="noopener" class="w-full sm:w-auto px-6 py-3 rounded-lg bg-white/5 hover:bg-white/10 text-white font-medium ring-1 ring-white/10 transition">
         {t('hero.cta.secondary')}
       </a>

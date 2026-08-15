@@ -29,4 +29,4 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-Sitemap: https://one-world-landing.pages.dev/sitemap-index.xml
+Sitemap: https://one-world.bayjf.com/sitemap-index.xml
