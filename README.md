@@ -6,8 +6,8 @@ One World 是一个基于 Phaser 的开源 2D 俯视角生活游戏化引擎：�
 
 | 类别 | 方案 |
 |------|------|
-| 框架 | Astro 4（`astro` ^4.16.0，SSG 静态输出） |
-| 样式 | Tailwind CSS 3（^3.4.0，通过 `@astrojs/tailwind` 集成，`applyBaseStyles: false`） |
+| 框架 | Astro 7（`astro` ^7.2.0，SSG 静态输出） |
+| 样式 | Tailwind CSS 4（`tailwindcss` ^4.3.3，通过 `@tailwindcss/vite` 插件集成） |
 | SEO | `@astrojs/sitemap`（3.2.1）、`public/robots.txt`、`public/llms.txt`（GEO） |
 | i18n | Astro 内置 i18n 配置 + 自研字典：`src/i18n/ui.ts`（中英文案）、`src/i18n/utils.ts`（取词/路径本地化工具） |
 | 包管理器 | npm（见 `package-lock.json`） |
